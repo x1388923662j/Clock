@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ClockView">
+        <attr name="dialColor" format="color"/>
+        <attr name="graduationColor" format="color"/>
+        <attr name="noSecondPointer" format="boolean"/>
+        <attr name="hourPointerColor" format="color"/>
+        <attr name="minutePointerColor" format="color"/>
+        <attr name="secondPointerColor" format="color"/>
+        <attr name="freshTime" format="enum">
+            <enum name="_64" value="0"/>
+            <enum name="_128" value="1"/>
+            <enum name="second" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>
