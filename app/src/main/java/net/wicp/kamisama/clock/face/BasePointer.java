@@ -1,12 +1,12 @@
 package net.wicp.kamisama.clock.face;
 
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
 
+import net.wicp.kamisama.clock.PointType;
 import net.wicp.kamisama.clock.tools.ScreenUtils;
 
 /**
@@ -16,7 +16,7 @@ import net.wicp.kamisama.clock.tools.ScreenUtils;
  * 创建时间：2016年06月17日 12:23
  */
 
-public abstract class IPointer extends Drawable {
+public abstract class BasePointer extends Drawable {
 
     protected int height;
     protected int width;
@@ -26,7 +26,12 @@ public abstract class IPointer extends Drawable {
     protected int    mPointWidth  = ScreenUtils.dp2px(1.5f);
     protected int    mPointColor  = Color.WHITE;
 
+    private PointType mPointType = PointType.SECOND;
+
+    protected int mMaxRadio;
+
     private float mRadio = -90f;
+
 
     @Override
     public void setBounds(int left, int top, int right, int bottom) {
@@ -37,6 +42,9 @@ public abstract class IPointer extends Drawable {
         if (mPointLength == 0)
             mPointLength = Math.min(height / 2, width / 2) / 3 * 2;
         mPaint.setStrokeWidth(mPointWidth);
+        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setAntiAlias(true);
+        mPaint.setShadowLayer(15,20,20,Color.parseColor("#20000000"));
     }
 
     public void setPointLength(int pointLength) {
@@ -74,16 +82,6 @@ public abstract class IPointer extends Drawable {
     }
 
     @Override
-    public void draw(Canvas canvas) {
-        float startX, startY, endX, endY;
-        startX = mPointCenter.x;
-        startY = mPointCenter.y;
-        endX = mPointLength * (float) Math.cos(2 * Math.PI * (mRadio / 360)) + mPointCenter.x;
-        endY = mPointLength * (float) Math.sin(2 * Math.PI * (mRadio / 360)) + mPointCenter.y;
-        canvas.drawLine(startX, startY, endX, endY, mPaint);
-    }
-
-    @Override
     public void setAlpha(int i) {
 
     }
@@ -98,4 +96,19 @@ public abstract class IPointer extends Drawable {
         return 0;
     }
 
+    public PointType getPointType() {
+        return mPointType;
+    }
+
+    public void setPointType(PointType pointType) {
+        mPointType = pointType;
+    }
+
+    public int getMaxRadio() {
+        return mMaxRadio;
+    }
+
+    public void setMaxRadio(int maxRadio) {
+        mMaxRadio = maxRadio;
+    }
 }

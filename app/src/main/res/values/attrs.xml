@@ -12,5 +12,14 @@
             <enum name="_128" value="1"/>
             <enum name="second" value="2"/>
         </attr>
+        <attr name="graduationCount" format="enum">
+            <enum name="_4" value="4"/>
+            <enum name="_12" value="12"/>
+            <enum name="_60" value="60"/>
+        </attr>
+        <attr name="type" format="enum">
+            <enum name="line" value="0"/>
+            <enum name="triangle" value="1"/>
+        </attr>
     </declare-styleable>
 </resources>
