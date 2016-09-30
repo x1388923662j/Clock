@@ -9,32 +9,37 @@
     tools:context="net.wicp.kamisama.clock.MainActivity">
 
     <!--<net.wicp.kamisama.clock.ClockView-->
-        <!--android:id="@+id/clockView"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_weight="1"-->
-        <!--android:background="@android:color/holo_green_dark"-->
-        <!--android:padding="12dp"-->
-        <!--app:dialColor="@android:color/white"-->
-        <!--app:freshTime="_64"-->
-        <!--app:graduationColor="@android:color/black"-->
-        <!--app:graduationCount="_60"-->
-        <!--app:hourPointerColor="@android:color/black"-->
-        <!--app:minutePointerColor="@android:color/black"-->
-        <!--app:secondPointerColor="@android:color/black"/>-->
+    <!--android:id="@+id/clockView"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@android:color/holo_green_dark"-->
+    <!--android:padding="12dp"-->
+    <!--app:dialColor="@android:color/white"-->
+    <!--app:freshTime="_64"-->
+    <!--app:graduationColor="@android:color/black"-->
+    <!--app:graduationCount="_60"-->
+    <!--app:hourPointerColor="@android:color/black"-->
+    <!--app:minutePointerColor="@android:color/black"-->
+    <!--app:secondPointerColor="@android:color/black"/>-->
 
-    <net.wicp.kamisama.clock.ClockView
+    <!--<net.wicp.kamisama.clock.ClockView-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="300dp"-->
+    <!--android:background="@android:color/black"-->
+    <!--android:padding="12dp"-->
+    <!--app:dialColor="@android:color/white"-->
+    <!--app:freshTime="second"-->
+    <!--app:graduationColor="@android:color/black"-->
+    <!--app:graduationCount="_60"-->
+    <!--app:hourPointerColor="@android:color/black"-->
+    <!--app:minutePointerColor="@android:color/black"-->
+    <!--app:secondPointerColor="@android:color/black"-->
+    <!--app:type="triangle"/>-->
+
+    <six.SixView
+        android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/black"
-        android:padding="12dp"
-        app:dialColor="@android:color/white"
-        app:freshTime="second"
-        app:graduationColor="@android:color/black"
-        app:graduationCount="_60"
-        app:hourPointerColor="@android:color/black"
-        app:minutePointerColor="@android:color/black"
-        app:secondPointerColor="@android:color/black"
-        app:type="triangle"/>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
